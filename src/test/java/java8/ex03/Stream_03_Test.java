@@ -56,16 +56,4 @@ public class Stream_03_Test {
         assertThat(result.get(true), hasSize(6));
         assertThat(result.get(false), hasSize(2));
     }
-
-    @Test
-    public void test_toMap() throws Exception {
-
-        List<Customer> customers = new Data().getCustomers();
-
-        // TODO Construire la map Sexe -> Chaîne représentant les prénoms des clients
-        Map<Gender, String> result = null;
-
-        assertThat(result.get(Gender.F), is("Alexandra|Marion|Sophie"));
-        assertThat(result.get(Gender.M), is("Cyril|Johnny"));
-    }
 }
