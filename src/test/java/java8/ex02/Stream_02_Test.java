@@ -30,14 +30,13 @@ public class Stream_02_Test {
     }
 
     @Test
-    public void test_flatmap() throws Exception {
+    public void test_flatMap_summarizingInt() throws Exception {
 
         List<Order> orders = new Data().getOrders();
 
         // TODO calculer les statistiques sur les prix des pizzas vendues
-        // TODO utiliser l'opération summaryStatistics
+        // TODO utiliser l'opération collect avec Collectors.summarizingInt
         IntSummaryStatistics result = null;
-
 
         assertThat(result.getSum(), is(10900L));
         assertThat(result.getMin(), is(1000));

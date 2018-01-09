@@ -123,4 +123,27 @@ public class Stream_01_Test {
         assertThat(result.get(), hasProperty("name", is("La Reine")));
         assertThat(result.get(), hasProperty("price", is(1000)));
     }
+    
+    @Test
+    public void test_sorted() throws Exception {
+        List<Order> orders = new Data().getOrders();
+
+        // TODO Trier les commandes sur le nom de famille du client
+        List<Order> result = null;
+
+        assertThat(result, hasSize(8));
+        
+        // Résultat: les 4 premières commandes de la liste appartiennent à M. Cotillard
+        assertThat(result.get(0).getCustomer(), hasProperty("id", is(2)));
+        assertThat(result.get(1).getCustomer(), hasProperty("id", is(2)));
+        assertThat(result.get(2).getCustomer(), hasProperty("id", is(2)));
+        assertThat(result.get(3).getCustomer(), hasProperty("id", is(2)));
+        
+       // Résultat: les 4 premières commandes de la liste appartiennent à J. Halliday
+        assertThat(result.get(4).getCustomer(), hasProperty("id", is(1)));
+        assertThat(result.get(5).getCustomer(), hasProperty("id", is(1)));
+        assertThat(result.get(6).getCustomer(), hasProperty("id", is(1)));
+        assertThat(result.get(7).getCustomer(), hasProperty("id", is(1)));
+        
+    }
 }
