@@ -24,7 +24,7 @@ public class Method_02_Test {
         	for(Person p : findAll()) {
         		cpt_personnes ++;
         	}
-        	return "["+cpt_personnes+" persons]";
+        	return "["+cpt_personnes+""+findAll().size()+"]";
         }
     }
     // end::IDao[]
